@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body>
+    <form action="#">
+        <h1>Student Registration Form</h1>
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullname">Full Name: </label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name">
+            <br><br><br>
+
+            <label for="dob">Date of Birth: </label>
+            <input type="date" id="dob" name="dob">
+            <br><br><br>
+
+            <label>Gender: </label>
+
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+
+            <br><br><br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="email">Email ID: </label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com">
+            <br><br><br>
+
+            <label for="phone">Mobile Number: </label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter mobile number">
+            <br><br><br>
+
+            <label for="address">Address: </label>
+            <br><br>
+
+            <textarea id="address" name="address" rows="5" cols="40" placeholder="Enter your address"></textarea>
+
+            <br><br><br>
+
+            <label for="city">City: </label>
+            <input type="text" id="city" name="city" placeholder="Enter city">
+            <br><br><br>
+
+            <label for="state">State: </label>
+            <select id="state" name="state">
+                <option value="">--Select State--</option>
+                <option value="tamilnadu">Tamil Nadu</option>
+                <option value="puducherry">Puducherry</option>
+                <option value="karnataka">Karnataka</option>
+                <option value="kerala">Kerala</option>
+                <option value="andhrapradesh">Andhra Pradesh</option>
+            </select>
+
+            <br><br><br>
+
+            <label for="pincode">Pincode: </label>
+            <input type="text" id="pincode" name="pincode" placeholder="Enter PIN code">
+
+            <br><br><br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Account Information</legend>
+
+            <label for="username">Username: </label>
+            <input type="text" id="username" name="username" placeholder="Create username">
+            <br><br><br>
+
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" placeholder="Create password">
+            <br><br><br>
+
+            <label for="cpassword">Confirm Password: </label>
+            <input type="password" id="cpassword" name="cpassword" placeholder="Confirm password">
+
+            <br><br><br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Education Details</legend>
+
+            <label for="qualification">Highest Qualification: </label>
+
+            <select id="qualification" name="qualification">
+                <option value="">--Select Qualification--</option>
+                <option value="be">B.E</option>
+                <option value="btech">B.Tech</option>
+                <option value="bca">BCA</option>
+                <option value="bsc">B.Sc</option>
+                <option value="bcom">B.Com</option>
+            </select>
+
+            <br><br><br>
+
+            <label for="course">Select Course: </label>
+
+            <select id="course" name="course">
+                <option value="">--Select Course--</option>
+                <option value="fullstack">Full Stack Development</option>
+                <option value="dataanalytics">Data Analytics</option>
+                <option value="datascience">Data Science</option>
+                <option value="aws">AWS DevOps</option>
+                <option value="aiml">AI/ML</option>
+            </select>
+
+            <br><br><br>
+
+            <label for="percentage">Percentage: </label>
+            <input type="number" id="percentage" name="percentage" placeholder="Enter percentage">
+            <br><br><br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Technical Skills</legend>
+
+            <input type="checkbox" id="html" name="skills" value="HTML">
+            <label for="html">HTML</label>
+
+            <input type="checkbox" id="css" name="skills" value="CSS">
+            <label for="css">CSS</label>
+
+            <input type="checkbox" id="javascript" name="skills" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+
+            <input type="checkbox" id="cpp" name="skills" value="C++">
+            <label for="cpp">C++</label>
+
+            <input type="checkbox" id="sql" name="skills" value="SQL">
+            <label for="sql">SQL</label>
+
+            <br><br><br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Documents</legend>
+
+            <label for="photo">Upload Photo: </label>
+            <input type="file" id="photo" name="photo">
+
+            <br><br><br>
+
+            <label for="resume">Upload Resume: </label>
+            <input type="file" id="resume" name="resume">
+
+            <br><br><br>
+
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+
+            <label for="joiningdate">Preferred Joining Date: </label>
+            <input type="date" id="joiningdate" name="joiningdate">
+
+            <br><br><br>
+
+            <label>Learning Mode: </label>
+
+            <input type="radio" id="online" name="mode" value="online">
+            <label for="online">Online</label>
+
+            <input type="radio" id="offline" name="mode" value="offline">
+            <label for="offline">Offline</label>
+
+            <input type="radio" id="hybrid" name="mode" value="hybrid">
+            <label for="hybrid">Hybrid</label>
+
+            <br><br><br>
+
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+
+    </form>
+
+</body>
+</html>
