@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 6 Attributes Assignment</title>
+</head>
+<body>
+
+<!-- HTML Attributes and Hyperlinks -->
+
+<h1> HTML Attributes and Hyperlinks</h1>
+
+<p title="This is a paragraph">Welcome to my webpage.</p>
+
+<!-- Absolute Link -->
+<a href="https://www.google.com">Visit Google</a>
+<br><br>
+<!-- Relative Link -->
+<a href="/nav1.html">Open About Page</a>
+<br><br>
+
+<a href="https://www.youtube.com" target="_blank">Open YouTube in New Tab</a>
+<br><br>
+<a href="/samplePdf.pdf" download>Download PDF</a>
+<br><br>
+<a href="mailto:lokeswari390@gmail.com">Send Email</a>
+
+
+<!-- Navigation Between Sections and Page -->
+
+<h1> Navigation Between Sections and Page</h1>
+
+<nav>
+    <a href="#home">Home</a> |
+    <a href="#about">About</a> |
+    <a href="#gallery">Gallery</a> |
+    <a href="#contact">Contact</a> |
+    <a href="/nav1.html">Next Page</a>
+</nav>
+
+<section id="home">
+    <h2>Home</h2>
+    <p>Welcome to my webpage.</p>
+</section>
+
+<section id="about">
+    <h2>About</h2>
+    <p>This webpage demonstrates HTML attributes.</p>
+</section>
+
+<section id="gallery">
+    <h2>Gallery</h2>
+    <p>This section contains images.</p>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Contact us using the form below.</p>
+</section>
+
+
+<!-- Images using src and alt -->
+
+<h1> Images using src and alt</h1>
+<img src="/beach.png" alt="Beautiful beach">
+
+
+<!-- Image Dimensions and Responsive Image -->
+
+<h1> Image Dimensions and Responsive Image</h1>
+<img src="/wood.jpg" alt="Wood" width="400" height="250">
+<br><br>
+<img src="/plastic_cup.jpg" alt="Plastic Cup" style="max-width:100%; height:auto;">
+
+
+<!--  Clickable Image with Title -->
+
+<h1> Clickable Image</h1>
+<a href="https://www.google.com" target="_blank">
+    <img src="/beach.png" alt="Click to visit Google" title="Beautiful Beach" width="300">
+</a>
+
+
+<!--  Global Attributes -->
+<h1> Global Attributes</h1>
+<p id="intro" class="content" title="This is a global attribute example" style="font-size: 20px;" lang="en">
+    This is a paragraph element to describe global attributes.
+</p>
+
+
+<!-- Basic Form with Action and Method -->
+
+<h1> Basic Form</h1>
+<form action="#" method="post">
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <br><br>
+    <input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>
