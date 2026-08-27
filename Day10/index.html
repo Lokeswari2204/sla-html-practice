@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10 - CSS Box Model Assignment</title>
+
+    <style>
+
+        /* Task 1 */
+        .box1 {
+            width: 300px;
+            padding: 20px;
+            border: 10px solid green;
+            margin-bottom: 20px;
+        }
+
+        /* Tasks 2, 3, 4, 5 */
+        .box2 {
+            width: 200px;
+            border: 2px solid red;
+            padding: 25px;
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        /* Task 9 */
+        .box3 {
+            width: 600px;
+            padding: 20px;
+            border: 2px solid black;
+            margin: 0 auto 20px;
+            /* means Top = 0, Right = auto, Left = auto, Bottom = 20px */
+        }
+
+        /* Task 10 */
+        .button-container {
+            width: 600px;
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            width: 193px;
+            box-sizing: border-box;
+        }
+
+        .btn1 {
+            padding: 10px;
+        }
+
+        .btn2 {
+            padding: 20px;
+        }
+
+        .btn3 {
+            padding: 30px;
+        }
+         /*
+    Container width = 600px
+    3 buttons are needed.
+    There are 2 gaps between 3 buttons.
+
+    Total gap = 10 + 10
+             = 20px
+
+    Space available for buttons
+    = 600 - 20
+    = 580px
+
+    Width of each button
+    = 580 / 3
+    = 193.33px
+
+    So, we use approximately 193px for each button.
+
+    Total:
+    193 + 10 + 193 + 10 + 193
+    = 599px
+
+    box-sizing: border-box means
+    padding is included inside the 193px width.
+
+    Therefore, even if the buttons have
+    different padding, their total size remains equal.
+*/
+
+        /* Task 11 */
+        .box4 {
+            width: 300px;
+            border: 2px solid black;
+            padding: 40px 10px 20px 50px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Day 10 - CSS Box Model Assignment</h1>
+
+    <!-- Task 1 -->
+    <h2>Task 1</h2>
+    <div class="box1">
+        Width: 300px, Padding: 20px, Green Border: 10px
+    </div>
+
+    <!-- Tasks 2, 3, 4, 5 -->
+    <h2>Tasks 2 - 5</h2>
+    <div class="box2">
+        Width: 200px<br>
+        Border: 2px solid red<br>
+        Padding: 25px<br>
+        Margin Left: 25px
+    </div>
+
+    <!-- Task 6 -->
+    <h2>Task 6 - Total Width Formula</h2>
+    <p>
+        Total Width = Content Width + Left Padding + Right Padding
+        + Left Border + Right Border
+    </p>
+
+    <p>
+        Example: 200 + 25 + 25 + 2 + 2 = <b>254px</b>
+    </p>
+
+    <!-- Task 7 -->
+    <h2>Task 7 - Total Height</h2>
+
+    <p>
+        Height = 50px<br>
+        Padding = 15px<br>
+        Border = 5px
+    </p>
+
+    <p>
+        Total Height = 50 + 15 + 15 + 5 + 5
+        = <b>90px</b>
+    </p>
+
+
+    <!-- Task 8 -->
+    <h2>Task 8 - Total Width</h2>
+
+    <p>
+        Width = 300px<br>
+        Padding = 20px<br>
+        Border = 5px<br>
+        Margin = 10px
+    </p>
+
+    <p>
+        <b>Formula:</b><br>
+        Total Horizontal Space = Width + Left Padding + Right Padding
+        + Left Border + Right Border + Left Margin + Right Margin
+    </p>
+
+    <p>
+        Total Space = 300 + 20 + 20 + 5 + 5 + 10 + 10
+        = <b>370px</b>
+    </p>
+
+
+    <!-- Task 9 -->
+    <h2>Task 9 - Centered Div</h2>
+
+    <div class="box3">
+        This div is 600px wide and horizontally centered.
+    </div>
+
+
+    <!-- Task 10 -->
+    <h2>Task 10 - Equal Sized Buttons</h2>
+
+    <div class="button-container">
+        <button class="btn btn1">Button 1</button>
+        <button class="btn btn2">Button 2</button>
+        <button class="btn btn3">Button 3</button>
+    </div>
+
+
+    <!-- Task 11 -->
+    <h2>Task 11 - Different Padding</h2>
+
+    <div class="box4">
+        Hello World
+    </div>
+
+</body>
+</html>
