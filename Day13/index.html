@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 13 - CSS Flexbox Assignment</title>
+
+    <style>
+
+        /* Task 1 - Center a Box */
+
+        .container1 {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+        }
+
+        .box1 {
+            width: 150px;
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* Task 2 - Horizontal Navigation Bar */
+
+        .nav-horizontal {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+            padding: 20px;
+            background-color: lightgray;
+        }
+
+        .nav-horizontal a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        /* Task 3 - Vertical Navigation Bar */
+
+        .nav-vertical {
+            width: 200px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        .nav-vertical a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        /* Task 4 - Card Layout */
+
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .card {
+            width: 150px;
+            padding: 20px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+
+        /* Task 5 - Card Row with Wrapping */
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-card {
+            width: 150px;
+            padding: 20px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Day 13 - CSS Flexbox Assignment</h1>
+
+    <!-- Task 1 - Center a Box -->
+
+    <h2>Task 1 - Center a Box</h2>
+
+    <div class="container1">
+        <div class="box1">
+            Centered Box
+        </div>
+    </div>
+
+
+    <!-- Task 2 - Horizontal Navigation Bar -->
+
+    <h2>Task 2 - Horizontal Navigation Bar</h2>
+
+    <nav class="nav-horizontal">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+    </nav>
+
+
+    <!-- Task 3 - Vertical Navigation Bar -->
+
+    <h2>Task 3 - Vertical Navigation Bar</h2>
+
+    <nav class="nav-vertical">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Products</a>
+    </nav>
+
+
+    <!-- Task 4 - Card Layout -->
+
+    <h2>Task 4 - Card Layout</h2>
+
+    <div class="card-container">
+
+        <div class="card">
+            <h3>Card 1</h3>
+            <p>Product 1</p>
+        </div>
+
+        <div class="card">
+            <h3>Card 2</h3>
+            <p>Product 2</p>
+        </div>
+
+        <div class="card">
+            <h3>Card 3</h3>
+            <p>Product 3</p>
+        </div>
+
+        <div class="card">
+            <h3>Card 4</h3>
+            <p>Product 4</p>
+        </div>
+
+        <div class="card">
+            <h3>Card 5</h3>
+            <p>Product 5</p>
+        </div>
+
+    </div>
+
+
+    <!-- Task 5 - Card Row with Wrapping -->
+
+    <h2>Task 5 - Card Row with Wrapping</h2>
+
+    <div class="product-container">
+
+        <div class="product-card">
+            <h3>Product 1</h3>
+            <p>Price: ₹500</p>
+        </div>
+
+        <div class="product-card">
+            <h3>Product 2</h3>
+            <p>Price: ₹600</p>
+        </div>
+
+        <div class="product-card">
+            <h3>Product 3</h3>
+            <p>Price: ₹700</p>
+        </div>
+
+        <div class="product-card">
+            <h3>Product 4</h3>
+            <p>Price: ₹800</p>
+        </div>
+
+        <div class="product-card">
+            <h3>Product 5</h3>
+            <p>Price: ₹900</p>
+        </div>
+
+        <div class="product-card">
+            <h3>Product 6</h3>
+            <p>Price: ₹1000</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
