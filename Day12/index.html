@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12 - CSS Position Assignment</title>
+
+    <style>
+
+        /* Task 1 - Profile Header */
+
+        .banner {
+            width: 600px;
+            height: 200px;
+            background-color: lightgray;
+            position: relative;
+            margin-bottom: 60px;
+        }
+
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            background-color: steelblue;
+            position: absolute;
+            left: 0;
+            bottom: -40px;
+        }
+
+        /* Profile picture height = 80px
+        Half = 40px
+        bottom: -40px
+        ↓
+        40px of picture hangs outside (-40px - halfway outside) */
+
+
+        /* Task 2 - Centered Block */
+
+        .box {
+            width: 50%;
+            border: 2px solid black;
+            padding: 20px;
+            display: block;
+            margin: 0 auto;
+        }
+
+
+        /* Task 3 - Pinned Notification */
+
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: lightgreen;
+            padding: 15px 25px;
+            border: 2px solid green;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Day 12 - CSS Position & List Assignment</h1>
+
+
+    <!-- Task 1 - Profile Header -->
+
+    <h2>Task 1 - Profile Header</h2>
+
+    <div class="banner">
+        <div class="profile-pic"></div>
+    </div>
+
+
+    <!-- Task 2 - Centered Block -->
+
+    <h2>Task 2 - Centered Block</h2>
+
+    <div class="box">
+        This is a 50% width box.
+        It is centered horizontally using margin: 0 auto.
+    </div>
+
+
+    <!-- Extra content for scrolling -->
+
+    <h2>Using position: fixed;</h2>
+
+    <p>
+        An element with position: fixed; is positioned relative to the viewport,
+        which means it always stays in the same place even if the page is scrolled.
+    </p>
+
+    <p>
+        The top, right, bottom, and left properties are used to set the final
+        location of the element.
+    </p>
+
+    <p>
+        A fixed element does not leave a gap in the page where it would normally
+        have been located.
+    </p>
+
+    <h2>CSS Position Property</h2>
+
+    <p>
+        The position property is used to control the position of an element
+        on a web page.
+    </p>
+
+    <p>
+        CSS has different position values such as static, relative, absolute,
+        fixed and sticky.
+    </p>
+
+    <p>
+        The fixed position is useful when we want an element to remain visible
+        while the user scrolls the page.
+    </p>
+
+    <p>
+        Scroll down the page and observe the notification. It will remain
+        in the same position even while the other content moves.
+    </p>
+
+    <h2>More Information</h2>
+
+    <p>
+        Fixed elements are positioned relative to the browser viewport.
+        The bottom and right properties determine the distance from the
+        edges of the browser window.
+    </p>
+
+    <p>
+        This type of positioning is commonly used for notifications,
+        chat buttons and other elements that should remain visible.
+    </p>
+
+
+    <!-- Task 3 - Pinned Notification -->
+
+    <h2>Task 3 - Pinned Notification</h2>
+
+    <div class="notification">
+        Update Available.
+    </div>
+
+</body>
+</html>
