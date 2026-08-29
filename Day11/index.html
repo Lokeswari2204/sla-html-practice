@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11 - CSS Display & Position</title>
+
+    <style>
+
+        /* TASK 1 - HORIZONTAL MENU */
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            font-size: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            padding: 15px 25px;
+            background-color: lightblue;
+            font-size: 16px;
+            
+        }
+
+        /*
+            display: inline-block makes the <li>
+            elements appear side by side.
+
+            Normally, a small gap appears between
+            inline-block elements because of the
+            space/newline in the HTML.
+
+            font-size: 0 on the <ul> removes
+            this unwanted white space.
+
+            font-size: 16px on <li> brings the
+            text size back to normal.
+        */
+
+
+        /* TASK 2 - CENTERED BLOCK */
+
+        .box {
+            width: 50%;
+            border: 2px solid black;
+            padding: 20px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /*
+            width: 50% means the box takes 50%
+            of the available width.
+
+            display: block makes the div a
+            block-level element.
+
+            margin: 0 auto means:
+
+            Top    = 0
+            Right  = auto
+            Bottom = 0
+            Left   = auto
+
+            auto on left and right gives equal
+            space on both sides, so the box is
+            centered horizontally.
+
+            margin: 0 auto does NOT center the
+            box vertically.
+        */
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Day 11 - CSS Display & Position</h1>
+
+    <!-- TASK 1-->
+
+    <h2>Task 1 - Horizontal Menu</h2>
+
+    <ul class="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Products</li>
+        <li>Contact</li>
+    </ul>
+
+
+    <!-- TASK 2-->
+
+    <h2>Task 2 - Centered Block</h2>
+
+    <div class="box">
+        This is a 50% width box.
+        It is centered horizontally using margin: 0 auto.
+    </div>
+
+</body>
+</html>
