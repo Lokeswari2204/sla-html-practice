@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day 16 CSS Assignment</title>
+
+    <style>
+
+        /* Q1. Basic Hover Color Change */
+
+        .button {
+            background-color: blue;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 18px;
+            transition: background-color 3s;
+        }
+
+        .button:hover {
+            background-color: green;
+        }
+
+
+        /* Q2. Make an Element Grow */
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            margin: 50px;
+            transition: transform 4s;
+        }
+
+        .box:hover {
+            transform: scale(1.2);
+        }
+
+
+        /* Q3. Change Color, Size and Shadow */
+
+        .card {
+            width: 200px;
+            padding: 30px;
+            background-color: lightblue;
+            text-align: center;
+            margin: 100px;
+            transition: all 0.5s;
+        }
+
+        .card:hover {
+            background-color: purple;
+            color: white;
+            transform: scale(1.5);
+            box-shadow: 0px 8px 20px blue;
+        }
+
+
+        /* Q4. Reveal Content */
+
+        .container {
+            width: 250px;
+            padding: 30px;
+            background-color:aquamarine;
+            text-align: center;
+            margin: 100px;
+        }
+
+        .container p {
+            opacity: 0;
+            transition: opacity 2s;
+        }
+
+        .container:hover p {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Q1 -->
+     <h3>Basic Hover Color Change</h3>
+    <button class="button">Hover Me</button>
+
+    <!-- Q2 -->
+     <h3>Make an Element Grow</h3>
+    <div class="box"></div>
+
+    <!-- Q3 -->
+     <h3>Change Color, Size and Shadow</h3>
+    <div class="card">
+        Hover Here
+    </div>
+
+    <!-- Q4 -->
+     <h3> Reveal Content</h3>
+    <div class="container">
+        <h3>Hover Here</h3>
+        <p>This content appears smoothly!</p>
+    </div>
+
+</body>
+</html>
