@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14 - Task 2</title>
+
+    <style>
+
+        /* Task 2 -  Website Page Layout */
+
+        body {
+            display: grid;
+
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer";
+
+            grid-template-columns: 150px 1fr;
+            grid-template-rows: 60px 1fr 60px;
+
+            margin: 5px;
+            height: 100vh;
+            gap: 10px;
+            text-align: center;
+        }
+
+        header,main,aside,footer {
+            background-color: yellowgreen;
+            padding: 20px;
+        }
+
+        #pageHeader {
+            grid-area: header;
+        }
+
+        #sideBar {
+            grid-area: sidebar;
+        }
+
+        #MainContent {
+            grid-area: main;
+        }
+
+        #pageFooter {
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header id="pageHeader">
+        Header
+    </header>
+
+    <aside id="sideBar">
+        Sidebar
+    </aside>
+
+    <main id="MainContent">
+        Main Content
+    </main>
+
+    <footer id="pageFooter">
+        Footer
+    </footer>
+
+</body>
+</html>

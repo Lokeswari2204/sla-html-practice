@@ -1,0 +1,107 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14 - Task 5</title>
+
+    <style>
+
+        /* Task 5: Dashboard Layout */
+
+        body {
+            display: grid;
+            grid-template-areas:
+                "sidebar navbar"
+                "sidebar main";
+            grid-template-columns: 180px 1fr;
+            grid-template-rows: 60px 1fr;
+            margin: 0;
+            height: 100vh;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: darkslategray;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .navbar {
+            grid-area: navbar;
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-content {
+            grid-area: main;
+            background-color: lightgray;
+            padding: 20px;
+        }
+
+        .widgets {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .widget {
+            background-color: white;
+            border: 1px solid black;
+            padding: 30px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        
+        <p>Home</p>
+        <p>Users</p>
+        <p>Reports</p>
+        <p>Settings</p>
+    </aside>
+
+    <nav class="navbar">
+        Top Navigation Bar
+    </nav>
+
+    <main class="main-content">
+
+        <h2>Dashboard</h2>
+
+        <div class="widgets">
+
+            <div class="widget">
+                <h3>Users</h3>
+                <p>1200</p>
+            </div>
+
+            <div class="widget">
+                <h3>Orders</h3>
+                <p>450</p>
+            </div>
+
+            <div class="widget">
+                <h3>Revenue</h3>
+                <p>₹50,000</p>
+            </div>
+
+            <div class="widget">
+                <h3>Products</h3>
+                <p>80</p>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
+```
