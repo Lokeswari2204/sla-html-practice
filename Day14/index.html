@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14 - CSS Grid Assignment</title>
+
+    <style>
+
+        /* Task 1: Basic Grid Layout */
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            background-color: blueviolet;
+            padding: 10px;
+            gap: 20px;
+        }
+
+        .grid-container > div {
+            background-color: aquamarine;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 50px;
+        }
+
+
+        /* Task 3: Responsive Card Grid */
+
+        .card {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            background-color: brown;
+            padding: 10px;
+            gap: 20px;
+        }
+
+        .card > div {
+            background-color: blanchedalmond;
+            border: 1px solid black;
+            text-align: center;
+            padding: 30px;
+        }
+
+
+        /* Task 4: Image Gallery */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 150px;
+            gap: 10px;
+            background-color: lightgray;
+            padding: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .image1 {
+            grid-column: span 2;
+        }
+
+        .image2 {
+            grid-row: span 2;
+        }
+
+        .image5 {
+            grid-column: span 2;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Task 1 -->
+
+    <h2>Task 1: Basic Grid Layout</h2>
+
+    <div class="grid-container">
+
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+
+    </div>
+
+
+    <!-- Task 3 -->
+
+    <h2>Task 3: Responsive Card Grid</h2>
+
+    <div class="card">
+
+        <div>Card 1</div>
+        <div>Card 2</div>
+        <div>Card 3</div>
+        <div>Card 4</div>
+        <div>Card 5</div>
+        <div>Card 6</div>
+
+    </div>
+
+
+    <!-- Task 4 -->
+
+    <h2>Task 4: Image Gallery</h2>
+
+    <div class="gallery">
+
+        <div class="image1">
+            <img src="Nature.jpg" alt="Image 1">
+        </div>
+
+        <div class="image2">
+            <img src="Mountain.jpg" alt="Image 2">
+        </div>
+
+        <div>
+            <img src="Beach.jpg" alt="Image 3">
+        </div>
+
+        <div>
+            <img src="Flower.jpg" alt="Image 4">
+        </div>
+
+        <div class="image5">
+            <img src="City.jpg" alt="Image 5">
+        </div>
+
+        <div>
+            <img src="Animal.jpg" alt="Image 6">
+        </div>
+
+    </div>
+
+</body>
+</html>
