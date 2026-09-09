@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do While Loop Functions</title>
+</head>
+<body>
+
+<script>
+    // DO WHILE LOOP
+    
+    // WITHOUT PARAMETER
+
+    console.log("WITHOUT PARAMETER");
+
+
+    // Q1: Series of 1 to 20
+
+    function q1()
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " ";
+            i++;
+        }
+        while(i <= 20);
+
+        console.log("Q1:", s);
+    }
+
+    q1();
+
+
+    // Q2: Odd numbers 1 to 20
+
+    function q2()
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " ";
+            i += 2;
+        }
+        while(i <= 20);
+
+        console.log("Q2:", s);
+    }
+
+    q2();
+
+
+    // Q3: Even numbers 0 to 20
+
+    function q3()
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            s = s + i + " ";
+            i += 2;
+        }
+        while(i <= 20);
+
+        console.log("Q3:", s);
+    }
+
+    q3();
+
+
+    // Q4: 5 Series 0 to 25
+
+    function q4()
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            s = s + i + " ";
+            i += 5;
+        }
+        while(i <= 25);
+
+        console.log("Q4:", s);
+    }
+
+    q4();
+
+
+    // Q5: 1 + 2 + 3 + ...
+
+    function q5()
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " + ";
+            i++;
+        }
+        while(i <= 10);
+
+        console.log("Q5:", s);
+    }
+
+    q5();
+
+
+    // Q6: 0 + 2 + 4 + 6 + ...
+
+    function q6()
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            s = s + i + " + ";
+            i += 2;
+        }
+        while(i <= 20);
+
+        console.log("Q6:", s);
+    }
+
+    q6();
+
+
+    // Q7: 1 + 3 + 5 + 7 + ...
+
+    function q7()
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " + ";
+            i += 2;
+        }
+        while(i <= 20);
+
+        console.log("Q7:", s);
+    }
+
+    q7();
+
+
+    // Q8: 0 + 5 + 10 + 15 + 20 + ...
+
+    function q8()
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            s = s + i + " + ";
+            i += 5;
+        }
+        while(i <= 20);
+
+        console.log("Q8:", s);
+    }
+
+    q8();
+
+
+    // Q9: 1/1! + 2/2! + 3/3! + ...
+
+    function q9()
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + "/" + i + "! + ";
+            i++;
+        }
+        while(i <= 5);
+
+        console.log("Q9:", s);
+    }
+
+    q9();
+
+
+    // Q10: 0 + 2/2! + 4/4! + ...
+
+    function q10()
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            if(i == 0)
+            {
+                s = s + "0 + ";
+            }
+            else
+            {
+                s = s + i + "/" + i + "! + ";
+            }
+
+            i += 2;
+        }
+        while(i <= 6);
+
+        console.log("Q10:", s);
+    }
+
+    q10();
+
+
+    // Q11: 1/1! + 3/3! + 5/5! + ...
+
+    function q11()
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + "/" + i + "! + ";
+            i += 2;
+        }
+        while(i <= 7);
+
+        console.log("Q11:", s);
+    }
+
+    q11();
+
+
+    // Q12: Factorial of a given number
+    // 5! = 5 * 4 * 3 * 2 * 1 = 120
+
+    function q12()
+    {
+        let n = 5;
+        let fact = 1;
+        let i = n;
+
+        do
+        {
+            fact = fact * i;
+            i--;
+        }
+        while(i >= 1);
+
+        console.log("Q12:", fact);
+    }
+
+    q12();
+
+
+    // Q13: Prime or Not
+
+    function q13()
+    {
+        let n = 7;
+        let count = 0;
+        let i = 1;
+
+        do
+        {
+            if(n % i == 0)
+            {
+                count++;
+            }
+
+            i++;
+        }
+        while(i <= n);
+
+        if(count == 2)
+        {
+            console.log("Q13:", n + " is Prime");
+        }
+        else
+        {
+            console.log("Q13:", n + " is Not Prime");
+        }
+    }
+
+    q13();
+
+
+    // Q14: Prime Number Series
+
+    function q14()
+    {
+        let s = "";
+        let n = 1;
+
+        do
+        {
+            let count = 0;
+            let i = 1;
+
+            do
+            {
+                if(n % i == 0)
+                {
+                    count++;
+                }
+
+                i++;
+            }
+            while(i <= n);
+
+            if(count == 2)
+            {
+                s = s + n + " ";
+            }
+
+            n++;
+        }
+        while(n <= 100);
+
+        console.log("Q14:", s);
+    }
+
+    q14();
+
+
+    // Q15: Armstrong or Not
+    // 153 = 1^3 + 5^3 + 3^3 = 153
+
+    function q15()
+    {
+        let n = 153;
+        let temp = n;
+        let sum = 0;
+
+        do
+        {
+            let r = temp % 10;
+            sum = sum + r * r * r;
+            temp = parseInt(temp / 10);
+        }
+        while(temp > 0);
+
+        if(sum == n)
+        {
+            console.log("Q15:", n + " is Armstrong");
+        }
+        else
+        {
+            console.log("Q15:", n + " is Not Armstrong");
+        }
+    }
+
+    q15();
+
+
+    // Q16: Armstrong Number Series
+
+    function q16()
+    {
+        let s = "";
+        let n = 1;
+
+        do
+        {
+            let temp = n;
+            let sum = 0;
+
+            do
+            {
+                let r = temp % 10;
+                sum = sum + r * r * r;
+                temp = parseInt(temp / 10);
+            }
+            while(temp > 0);
+
+            if(sum == n)
+            {
+                s = s + n + " ";
+            }
+
+            n++;
+        }
+        while(n <= 1000);
+
+        console.log("Q16:", s);
+    }
+
+    q16();
+
+
+    // Q17: Fibonacci Series
+    // 0 1 1 2 3 5 8 13...
+
+    function q17()
+    {
+        let s = "";
+        let a = 0;
+        let b = 1;
+        let i = 1;
+
+        do
+        {
+            s = s + a + " ";
+
+            let c = a + b;
+            a = b;
+            b = c;
+
+            i++;
+        }
+        while(i <= 10);
+
+        console.log("Q17:", s);
+    }
+
+    q17();
+
+
+    // Q18: 5 Table
+
+    function q18()
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " * 5 = " + (i * 5) + "\n";
+            i++;
+        }
+        while(i <= 10);
+
+        console.log("Q18:\n" + s);
+    }
+
+    q18();
+
+
+    // Q19: Sum of Digits
+    // 123 = 1 + 2 + 3 = 6
+
+    function q19()
+    {
+        let n = 123;
+        let sum = 0;
+
+        do
+        {
+            let r = n % 10;
+            sum = sum + r;
+            n = parseInt(n / 10);
+        }
+        while(n > 0);
+
+        console.log("Q19:", sum);
+    }
+
+    q19();
+
+
+    // Q20: Palindrome or Not
+
+    function q20()
+    {
+        let n = "MALAYALAM";
+        let rev = "";
+        let i = n.length - 1;
+
+        do
+        {
+            rev = rev + n[i];
+            i--;
+        }
+        while(i >= 0);
+
+        if(n.toLowerCase() == rev.toLowerCase())
+        {
+            console.log("Q20:", n + " is Palindrome");
+        }
+        else
+        {
+            console.log("Q20:", n + " is Not Palindrome");
+        }
+    }
+
+    q20();
+
+
+
+    // WITH PARAMETER
+
+    console.log("WITH PARAMETER");
+
+
+    // Q1
+
+    function q1p(n)
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " ";
+            i++;
+        }
+        while(i <= n);
+
+        console.log("Q1:", s);
+    }
+
+    q1p(20);
+
+
+    // Q2
+
+    function q2p(n)
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " ";
+            i += 2;
+        }
+        while(i <= n);
+
+        console.log("Q2:", s);
+    }
+
+    q2p(20);
+
+
+    // Q3
+
+    function q3p(n)
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            s = s + i + " ";
+            i += 2;
+        }
+        while(i <= n);
+
+        console.log("Q3:", s);
+    }
+
+    q3p(20);
+
+
+    // Q4
+
+    function q4p(n)
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            s = s + i + " ";
+            i += 5;
+        }
+        while(i <= n);
+
+        console.log("Q4:", s);
+    }
+
+    q4p(25);
+
+
+    // Q5
+
+    function q5p(n)
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " + ";
+            i++;
+        }
+        while(i <= n);
+
+        console.log("Q5:", s);
+    }
+
+    q5p(10);
+
+
+    // Q6
+
+    function q6p(n)
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            s = s + i + " + ";
+            i += 2;
+        }
+        while(i <= n);
+
+        console.log("Q6:", s);
+    }
+
+    q6p(20);
+
+
+    // Q7
+
+    function q7p(n)
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " + ";
+            i += 2;
+        }
+        while(i <= n);
+
+        console.log("Q7:", s);
+    }
+
+    q7p(20);
+
+
+    // Q8
+
+    function q8p(n)
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            s = s + i + " + ";
+            i += 5;
+        }
+        while(i <= n);
+
+        console.log("Q8:", s);
+    }
+
+    q8p(20);
+
+
+    // Q9
+
+    function q9p(n)
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + "/" + i + "! + ";
+            i++;
+        }
+        while(i <= n);
+
+        console.log("Q9:", s);
+    }
+
+    q9p(5);
+
+
+    // Q10
+
+    function q10p(n)
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            if(i == 0)
+            {
+                s = s + "0 + ";
+            }
+            else
+            {
+                s = s + i + "/" + i + "! + ";
+            }
+
+            i += 2;
+        }
+        while(i <= n);
+
+        console.log("Q10:", s);
+    }
+
+    q10p(6);
+
+
+    // Q11
+
+    function q11p(n)
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + "/" + i + "! + ";
+            i += 2;
+        }
+        while(i <= n);
+
+        console.log("Q11:", s);
+    }
+
+    q11p(7);
+
+
+    // Q12
+
+    function q12p(n)
+    {
+        let fact = 1;
+        let i = n;
+
+        do
+        {
+            fact = fact * i;
+            i--;
+        }
+        while(i >= 1);
+
+        console.log("Q12:", fact);
+    }
+
+    q12p(5);
+
+
+    // Q13
+
+    function q13p(n)
+    {
+        let count = 0;
+        let i = 1;
+
+        do
+        {
+            if(n % i == 0)
+            {
+                count++;
+            }
+
+            i++;
+        }
+        while(i <= n);
+
+        if(count == 2)
+        {
+            console.log("Q13:", n + " is Prime");
+        }
+        else
+        {
+            console.log("Q13:", n + " is Not Prime");
+        }
+    }
+
+    q13p(7);
+
+
+    // Q14
+
+    function q14p(n)
+    {
+        let s = "";
+        let j = 1;
+
+        do
+        {
+            let count = 0;
+            let i = 1;
+
+            do
+            {
+                if(j % i == 0)
+                {
+                    count++;
+                }
+
+                i++;
+            }
+            while(i <= j);
+
+            if(count == 2)
+            {
+                s = s + j + " ";
+            }
+
+            j++;
+        }
+        while(j <= n);
+
+        console.log("Q14:", s);
+    }
+
+    q14p(100);
+
+
+    // Q15
+
+    function q15p(n)
+    {
+        let temp = n;
+        let sum = 0;
+
+        do
+        {
+            let r = temp % 10;
+            sum = sum + r * r * r;
+            temp = parseInt(temp / 10);
+        }
+        while(temp > 0);
+
+        if(sum == n)
+        {
+            console.log("Q15:", n + " is Armstrong");
+        }
+        else
+        {
+            console.log("Q15:", n + " is Not Armstrong");
+        }
+    }
+
+    q15p(153);
+
+
+    // Q16
+
+    function q16p(n)
+    {
+        let s = "";
+        let j = 1;
+
+        do
+        {
+            let temp = j;
+            let sum = 0;
+
+            do
+            {
+                let r = temp % 10;
+                sum = sum + r * r * r;
+                temp = parseInt(temp / 10);
+            }
+            while(temp > 0);
+
+            if(sum == j)
+            {
+                s = s + j + " ";
+            }
+
+            j++;
+        }
+        while(j <= n);
+
+        console.log("Q16:", s);
+    }
+
+    q16p(1000);
+
+
+    // Q17
+
+    function q17p(n)
+    {
+        let s = "";
+        let a = 0;
+        let b = 1;
+        let i = 1;
+
+        do
+        {
+            s = s + a + " ";
+
+            let c = a + b;
+            a = b;
+            b = c;
+
+            i++;
+        }
+        while(i <= n);
+
+        console.log("Q17:", s);
+    }
+
+    q17p(10);
+
+
+    // Q18
+
+    function q18p(n)
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " * 5 = " + (i * 5) + "\n";
+            i++;
+        }
+        while(i <= n);
+
+        console.log("Q18:\n" + s);
+    }
+
+    q18p(10);
+
+
+    // Q19
+
+    function q19p(n)
+    {
+        let sum = 0;
+
+        do
+        {
+            let r = n % 10;
+            sum = sum + r;
+            n = parseInt(n / 10);
+        }
+        while(n > 0);
+
+        console.log("Q19:", sum);
+    }
+
+    q19p(123);
+
+
+    // Q20
+
+    function q20p(n)
+    {
+        let rev = "";
+        let i = n.length - 1;
+
+        do
+        {
+            rev = rev + n[i];
+            i--;
+        }
+        while(i >= 0);
+
+        if(n.toLowerCase() == rev.toLowerCase())
+        {
+            console.log("Q20:", n + " is Palindrome");
+        }
+        else
+        {
+            console.log("Q20:", n + " is Not Palindrome");
+        }
+    }
+
+    q20p("MALAYALAM");
+
+
+
+    // WITH PARAMETER + RETURN
+
+    console.log("WITH PARAMETER + RETURN");
+
+
+    // Q1
+
+    function q1r(n)
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " ";
+            i++;
+        }
+        while(i <= n);
+
+        return s;
+    }
+
+    console.log("Q1:", q1r(20));
+
+
+    // Q2
+
+    function q2r(n)
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " ";
+            i += 2;
+        }
+        while(i <= n);
+
+        return s;
+    }
+
+    console.log("Q2:", q2r(20));
+
+
+    // Q3
+
+    function q3r(n)
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            s = s + i + " ";
+            i += 2;
+        }
+        while(i <= n);
+
+        return s;
+    }
+
+    console.log("Q3:", q3r(20));
+
+
+    // Q4
+
+    function q4r(n)
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            s = s + i + " ";
+            i += 5;
+        }
+        while(i <= n);
+
+        return s;
+    }
+
+    console.log("Q4:", q4r(25));
+
+
+    // Q5
+
+    function q5r(n)
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " + ";
+            i++;
+        }
+        while(i <= n);
+
+        return s;
+    }
+
+    console.log("Q5:", q5r(10));
+
+
+    // Q6
+
+    function q6r(n)
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            s = s + i + " + ";
+            i += 2;
+        }
+        while(i <= n);
+
+        return s;
+    }
+
+    console.log("Q6:", q6r(20));
+
+
+    // Q7
+
+    function q7r(n)
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " + ";
+            i += 2;
+        }
+        while(i <= n);
+
+        return s;
+    }
+
+    console.log("Q7:", q7r(20));
+
+
+    // Q8
+
+    function q8r(n)
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            s = s + i + " + ";
+            i += 5;
+        }
+        while(i <= n);
+
+        return s;
+    }
+
+    console.log("Q8:", q8r(20));
+
+
+    // Q9
+
+    function q9r(n)
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + "/" + i + "! + ";
+            i++;
+        }
+        while(i <= n);
+
+        return s;
+    }
+
+    console.log("Q9:", q9r(5));
+
+
+    // Q10
+
+    function q10r(n)
+    {
+        let s = "";
+        let i = 0;
+
+        do
+        {
+            if(i == 0)
+            {
+                s = s + "0 + ";
+            }
+            else
+            {
+                s = s + i + "/" + i + "! + ";
+            }
+
+            i += 2;
+        }
+        while(i <= n);
+
+        return s;
+    }
+
+    console.log("Q10:", q10r(6));
+
+
+    // Q11
+
+    function q11r(n)
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + "/" + i + "! + ";
+            i += 2;
+        }
+        while(i <= n);
+
+        return s;
+    }
+
+    console.log("Q11:", q11r(7));
+
+
+    // Q12
+
+    function q12r(n)
+    {
+        let fact = 1;
+        let i = n;
+
+        do
+        {
+            fact = fact * i;
+            i--;
+        }
+        while(i >= 1);
+
+        return fact;
+    }
+
+    console.log("Q12:", q12r(5));
+
+
+    // Q13
+
+    function q13r(n)
+    {
+        let count = 0;
+        let i = 1;
+
+        do
+        {
+            if(n % i == 0)
+            {
+                count++;
+            }
+
+            i++;
+        }
+        while(i <= n);
+
+        if(count == 2)
+        {
+            return "Prime";
+        }
+        else
+        {
+            return "Not Prime";
+        }
+    }
+
+    console.log("Q13:", q13r(7));
+
+
+    // Q14
+
+    function q14r(n)
+    {
+        let s = "";
+        let j = 1;
+
+        do
+        {
+            let count = 0;
+            let i = 1;
+
+            do
+            {
+                if(j % i == 0)
+                {
+                    count++;
+                }
+
+                i++;
+            }
+            while(i <= j);
+
+            if(count == 2)
+            {
+                s = s + j + " ";
+            }
+
+            j++;
+        }
+        while(j <= n);
+
+        return s;
+    }
+
+    console.log("Q14:", q14r(100));
+
+
+    // Q15
+
+    function q15r(n)
+    {
+        let temp = n;
+        let sum = 0;
+
+        do
+        {
+            let r = temp % 10;
+            sum = sum + r * r * r;
+            temp = parseInt(temp / 10);
+        }
+        while(temp > 0);
+
+        if(sum == n)
+        {
+            return "Armstrong";
+        }
+        else
+        {
+            return "Not Armstrong";
+        }
+    }
+
+    console.log("Q15:", q15r(153));
+
+
+    // Q16
+
+    function q16r(n)
+    {
+        let s = "";
+        let j = 1;
+
+        do
+        {
+            let temp = j;
+            let sum = 0;
+
+            do
+            {
+                let r = temp % 10;
+                sum = sum + r * r * r;
+                temp = parseInt(temp / 10);
+            }
+            while(temp > 0);
+
+            if(sum == j)
+            {
+                s = s + j + " ";
+            }
+
+            j++;
+        }
+        while(j <= n);
+
+        return s;
+    }
+
+    console.log("Q16:", q16r(1000));
+
+
+    // Q17
+
+    function q17r(n)
+    {
+        let s = "";
+        let a = 0;
+        let b = 1;
+        let i = 1;
+
+        do
+        {
+            s = s + a + " ";
+
+            let c = a + b;
+            a = b;
+            b = c;
+
+            i++;
+        }
+        while(i <= n);
+
+        return s;
+    }
+
+    console.log("Q17:", q17r(10));
+
+
+    // Q18
+
+    function q18r(n)
+    {
+        let s = "";
+        let i = 1;
+
+        do
+        {
+            s = s + i + " * 5 = " + (i * 5) + "\n";
+            i++;
+        }
+        while(i <= n);
+
+        return s;
+    }
+
+    console.log("Q18:\n" + q18r(10));
+
+
+    // Q19
+
+    function q19r(n)
+    {
+        let sum = 0;
+
+        do
+        {
+            let r = n % 10;
+            sum = sum + r;
+            n = parseInt(n / 10);
+        }
+        while(n > 0);
+
+        return sum;
+    }
+
+    console.log("Q19:", q19r(123));
+
+
+    // Q20
+
+    function q20r(n)
+    {
+        let rev = "";
+        let i = n.length - 1;
+
+        do
+        {
+            rev = rev + n[i];
+            i--;
+        }
+        while(i >= 0);
+
+        if(n.toLowerCase() == rev.toLowerCase())
+        {
+            return "Palindrome";
+        }
+        else
+        {
+            return "Not Palindrome";
+        }
+    }
+
+    console.log("Q20:", q20r("MALAYALAM"));
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop Programs</title>
+</head>
+<body>
+<script>
+
+    // FOR LOOP
+    console.log("FOR LOOP")
+
+    // Q12: Factorial of a given number
+    // 5! = 5 * 4 * 3 * 2 * 1 = 120
+
+    let n12 = Number(prompt("Q12: Enter the number"));
+    let fact = 1;
+
+    for(let i = n12; i >= 1; i--)
+    {
+        fact = fact * i;
+    }
+
+    console.log("Q12:", n12 + "! =", fact);
+
+
+    // Q13: Find out the given number is Prime or Not
+
+    let n13 = Number(prompt("Q13: Enter the number"));
+    let ctr = 0;
+
+    for(let i = 1; i <= n13; i++)
+    {
+        if(n13 % i == 0)
+        {
+            ctr++;
+        }
+    }
+
+    if(ctr == 2)
+    {
+        console.log("Q13:", n13 + " is a prime number");
+    }
+    else
+    {
+        console.log("Q13:", n13 + " is not a prime number");
+    }
+
+
+    // Q14: Print the Prime Number Series
+
+    let s14 = "";
+    
+    for(let n = 1; n <= 100; n++)
+    {
+        let ctr = 0;
+
+        for(let i = 1; i <= n; i++)
+        {
+            if(n % i == 0)
+            {
+                ctr++;
+            }
+        }
+
+        if(ctr == 2)
+        {
+            s14 = s14 + n + " ";
+        }
+    }
+
+    console.log("Q14:", s14);
+
+
+    // Q15: Find out the given number is Armstrong or Not
+    // 153 = 1^3 + 5^3 + 3^3 = 153
+
+    let n15 = Number(prompt("Q15: Enter the number"));
+    let temp15 = n15;
+    let sum15 = 0;
+    let r15;
+
+    for(; temp15 > 0; temp15 = parseInt(temp15 / 10))
+    {
+        r15 = temp15 % 10;
+        sum15 = sum15 + r15 * r15 * r15;
+    }
+
+    if(sum15 == n15)
+    {
+        console.log("Q15:", n15 + " is an Armstrong number");
+    }
+    else
+    {
+        console.log("Q15:", n15 + " is not an Armstrong number");
+    }
+
+
+    // Q16: Print the Armstrong Number Series
+
+    let s16 = "";
+
+    for(let n = 1; n <= 1000; n++)
+    {
+        let temp = n;
+        let sum = 0;
+        let r;
+
+        for(; temp > 0; temp = parseInt(temp / 10))
+        {
+            r = temp % 10;
+            sum = sum + r * r * r;
+        }
+
+        if(sum == n)
+        {
+            s16 = s16 + n + " ";
+        }
+    }
+
+    console.log("Q16:", s16);
+
+
+    // Q17: Fibonacci Series
+    // 0 1 1 2 3 5 8 13.....
+
+    let s17 = "";
+    let a = 0;
+    let b = 1;
+
+    for(let i = 1; i <= 10; i++)
+    {
+        s17 = s17 + a + " ";
+
+        let c = a + b;
+        a = b;
+        b = c;
+    }
+
+    console.log("Q17:", s17);
+
+
+    // Q18: Print the 5 Table
+    // 1 * 5 = 5
+
+    let s18 = "";
+
+    for(let i = 1; i <= 10; i++)
+    {
+        s18 = s18 + i + " * 5 = " + (i * 5) + "\n";
+    }
+
+    console.log("Q18:\n" + s18);
+
+
+    // Q19: Sum of Digits
+    // Example: 123 = 1 + 2 + 3 = 6
+
+    let n19 = Number(prompt("Q19: Enter the number"));
+    let temp19 = n19;
+    let sum19 = 0;
+    let r19;
+
+    for(; temp19 > 0; temp19 = parseInt(temp19 / 10))
+    {
+        r19 = temp19 % 10;
+        sum19 = sum19 + r19;
+    }
+
+    console.log("Q19:", n19 + " = " + sum19);
+
+
+    // Q20: Palindrome or Not
+    // BAAB, MALAYALAM, MADAM
+
+    let n20 = prompt("Q20: Enter the word");
+    let reverse20 = "";
+
+    for(let i = n20.length - 1; i >= 0; i--)
+    {
+        reverse20 = reverse20 + n20[i];
+    }
+
+    if(n20.toLowerCase() == reverse20.toLowerCase())
+    {
+        console.log("Q20:", n20 + " is a palindrome");
+    }
+    else
+    {
+        console.log("Q20:", n20 + " is not a palindrome");
+    }
+
+</script>
+
+</body>
+</html>
