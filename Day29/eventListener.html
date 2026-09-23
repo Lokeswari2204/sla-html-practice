@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Q1 -->
+    <h2>Q1:</h2>
+    <button id="btn1">Click me to see the count</button>
+    <p id="result"></p>
+    <!-- Q2 -->
+    <h2>Q2:</h2>
+    <button id="btn2">Click me to change the paragraph text</button>
+    <p id="changeText">Hello, World!</p>
+    <!-- Q3 -->
+    <h2>Q3:</h2>
+    <button id="darkBtn">Dark Mode</button>
+    <style>
+        .dark{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <!-- Q4 -->
+    <h2>Q4:</h2>
+    <div id="box" style="background-color: lightblue; width: 150px; height: 100px;">Mouse Over me</div>
+    <!-- Q5 -->
+    <h2>Q5:</h2>
+    <input type="text" id="inputBox" placeholder="Type something">
+    <p id="res"></p>
+
+
+    <script>
+        //Q1
+        let counter = 0;
+        document.getElementById("btn1").addEventListener("click", function(){
+            counter++;
+            document.getElementById("result").innerHTML = "Click count: " + counter;
+        });
+
+        //Q2
+        document.getElementById("btn2").addEventListener("click", function(){
+            document.getElementById("changeText").innerHTML = "Hello, Javascript!";
+        });
+
+        //Q3
+        document.getElementById("darkBtn").addEventListener("click", function(){
+            document.body.classList.toggle("dark");
+        });
+
+        //Q4
+        let box = document.getElementById("box");
+        box.addEventListener("mouseenter", function(){
+            box.style.backgroundColor = "yellow";
+        });
+        box.addEventListener("mouseleave", function(){
+            box.style.backgroundColor = "lightblue";
+        });
+
+        //Q5
+        document.getElementById("inputBox").addEventListener("input", function(){
+            document.getElementById("res").innerHTML = "Input box: "+ this.value;
+        });
+
+    </script>
+
+</body>
+</html>
