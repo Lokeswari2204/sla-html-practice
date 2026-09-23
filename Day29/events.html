@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Q1 -->
+     <h1>Q1:</h1>
+    <button id="btn1" onclick="displayText()">Click me</button>
+    <!-- Q2 -->
+    <h1>Q2:</h1>
+    <p id="msg1">This is my paragraph text.</p>
+    <button onclick="changeColor()">Click me</button>
+    <!-- Q3 -->
+    <h1>Q3:</h1>
+    <div id="box1" onmouseover="mover()" style="background-color: red;  width:120px;  height:20px;  padding:40px;">Mouse Over Me</div>
+    <!-- Q4 -->
+    <h1>Q4:</h1>
+    <button ondblclick="displayAlert()">Double Click Me</button>
+    <!-- Q5 -->
+    <h1>Q5:</h1>
+    <input type="text" onkeydown="displayKey(event)" placeholder="Press any Key">
+    <p id="result"></p>
+
+    <script>
+        // Q1
+        function displayText()
+        {
+             document.getElementById("btn1").innerHTML = "Hello, World!";
+        }
+        //  Q2
+        function changeColor()
+        {
+            document.getElementById("msg1").style.color = "blue";
+        }
+        //Q3
+        function mover()
+        {
+            document.getElementById("box1").style.backgroundColor = "yellow";
+        }
+        //Q4
+        function displayAlert()
+        {
+            alert("Button was double clicked!");
+        }
+        //Q5
+        function displayKey(event)
+        {
+            document.getElementById("result").innerHTML = "Key Pressed: " + event.key;
+        }
+
+    </script>
+</body>
+</html>
