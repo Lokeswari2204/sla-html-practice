@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        .container {
+            width: 800px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .question {
+            margin-top: 15px;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+
+        button:hover {
+            background: darkblue;
+        }
+
+        .success {
+            color: green;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Customer Feedback Form</h2>
+    <form id="feedbackForm">
+    
+        <div class="question">1. Full Name</div>
+        <input type="text" id="name" placeholder="Enter Full Name" required>
+ 
+        <div class="question">2. Email Address</div>
+        <input type="email" id="email" placeholder="Enter Email Address" required>
+
+        <div class="question">3. Reason for Visit / Purchase</div>
+
+        <input type="radio" name="reason" value="Product Purchase">
+        Product Purchase
+
+        <input type="radio" name="reason" value="Customer Support">
+        Customer Support
+
+        <input type="radio" name="reason" value="Browsing / Research">
+        Browsing / Research
+
+        <input type="radio" name="reason" value="Other">
+        Other
+
+        <div class="question">4. Overall Satisfaction</div>
+
+        <input type="radio" name="satisfaction" value="1">
+        1 - Very Dissatisfied
+
+        <input type="radio" name="satisfaction" value="2">
+        2 - Dissatisfied
+
+        <input type="radio" name="satisfaction" value="3">
+        3 - Neutral
+
+        <input type="radio" name="satisfaction" value="4">
+        4 - Satisfied
+
+        <input type="radio" name="satisfaction" value="5">
+        5 - Very Satisfied
+
+        <div class="question">5. Ease of Use / Navigation</div>
+
+        <input type="radio" name="ease" value="Very Easy">
+        Very Easy
+
+        <input type="radio" name="ease" value="Easy">
+        Easy
+
+        <input type="radio" name="ease" value="Neutral">
+        Neutral
+
+        <input type="radio" name="ease" value="Difficult">
+        Difficult
+
+        <input type="radio" name="ease" value="Very Difficult">
+        Very Difficult
+
+        <div class="question">6. Product / Service Quality</div>
+
+        <input type="radio" name="quality" value="Excellent">
+        Excellent
+
+        <input type="radio" name="quality" value="Good">
+        Good
+
+        <input type="radio" name="quality" value="Average">
+        Average
+
+        <input type="radio" name="quality" value="Poor">
+        Poor
+
+        <input type="radio" name="quality" value="Very Poor">
+        Very Poor
+
+        <div class="question">7. Staff / Customer Support Helpfulness</div>
+
+        <input type="radio" name="support" value="N/A - No interaction">
+        N/A - No interaction
+
+        <input type="radio" name="support" value="Extremely Helpful">
+        Extremely Helpful
+
+        <input type="radio" name="support" value="Somewhat Helpful">
+        Somewhat Helpful
+
+        <input type="radio" name="support" value="Unhelpful">
+        Unhelpful
+
+        <div class="question">8. How likely are you to recommend us to a friend?</div>
+
+        Score (0 to 10):
+        <input type="number" id="recommend" min="0" max="10" required>
+
+        <div class="question">9. What can we improve?</div>
+
+        <input type="checkbox" name="improve" value="Product Selection">
+        Product Selection
+
+        <input type="checkbox" name="improve" value="Pricing">
+        Pricing
+
+        <input type="checkbox" name="improve" value="Website / App">
+        Website / App
+
+        <input type="checkbox" name="improve" value="Delivery / Service Speed">
+        Delivery / Service Speed
+
+        <input type="checkbox" name="improve" value="Customer Support">
+        Customer Support
+
+        <div class="question">10. Additional Comments</div>
+
+        <textarea id="comments" rows="5" placeholder="Enter your comments"></textarea>
+
+        <button type="submit">Submit Feedback</button>
+
+    </form>
+
+    <p class="success" id="msg"></p>
+
+</div>
+<script>
+
+    document.getElementById("feedbackForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let recommend = document.getElementById("recommend").value;
+        let comments = document.getElementById("comments").value;
+
+        let reason = document.querySelector('input[name="reason"]:checked')?.value || "";
+
+        let satisfaction = document.querySelector('input[name="satisfaction"]:checked')?.value || "";
+
+        let ease = document.querySelector('input[name="ease"]:checked')?.value || "";
+
+        let quality = document.querySelector('input[name="quality"]:checked')?.value || "";
+
+        let support = document.querySelector('input[name="support"]:checked')?.value || "";
+
+        let improve = []; 
+        document.querySelectorAll('input[name="improve"]:checked').forEach(function(item) {
+            improve.push(item.value);
+        });
+
+        let feedback = {
+            name: name,
+            email: email,
+            reason: reason,
+            satisfaction: satisfaction,
+            ease: ease,
+            quality: quality,
+            support: support,
+            recommend: recommend,
+            improve: improve,
+            comments: comments
+        };
+
+        localStorage.setItem("feedbackData", JSON.stringify(feedback));
+        sessionStorage.setItem("feedbackData", JSON.stringify(feedback));
+        document.getElementById("msg").innerText = "Feedback Submitted Successfully!";
+        document.getElementById("feedbackForm").reset();
+
+    });
+
+</script>
+
+</body>
+</html>
